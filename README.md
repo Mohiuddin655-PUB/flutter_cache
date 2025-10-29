@@ -5,12 +5,16 @@ A globally shared cache for storing and reusing logical data or objects by type 
 ## Example
 
 ```dart
-import 'package:cache/cache.dart';
+import 'package:cache_manager/cache.dart';
 
-void main() {
-  final cache = Cache.put("user", () {
+void main() async {
+  CacheManager.put("user", () {
     return {"name": "Json"};
   });
-  print(cache);
+  print(CacheManager.get("user"));
+  await CacheManager.putAsync("user2", () async {
+    return {"name": "Future Json"};
+  });
+  print(CacheManager.get("user2"));
 }
 ```

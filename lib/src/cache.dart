@@ -12,16 +12,29 @@ import 'package:flutter/foundation.dart';
 ///   () => UserModel(),
 /// );
 /// ```
-class Cache {
+class CacheManager {
   static final Map<String, Object> _cache = {};
 
   /// Retrieves an existing instance if available, or creates and stores
   /// a new one using the provided [create] function.
-  static T put<T extends Object>(String key, T Function() create) {
+  static T put<T extends Object?>(String key, T Function() create) {
     final cache = _cache[key];
     if (cache is T) return cache;
     final x = create();
-    _cache[key] = x;
+    if (x != null) _cache[key] = x;
+    return x;
+  }
+
+  /// Retrieves an existing instance if available, or creates and stores
+  /// a new one using the provided [create] function.
+  static Future<T> putAsync<T extends Object?>(
+    String key,
+    Future<T> Function() create,
+  ) async {
+    final cache = _cache[key];
+    if (cache is T) return cache;
+    final x = await create();
+    if (x != null) _cache[key] = x;
     return x;
   }
 

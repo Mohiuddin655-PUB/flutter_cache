@@ -1,4 +1,4 @@
-name: cache
+name: cache_manager
 description: "A globally shared cache for storing and reusing logical data or objects by type and key."
 version: 1.0.0
 repository: https://github.com/Mohiuddin655-PUB/flutter_cache

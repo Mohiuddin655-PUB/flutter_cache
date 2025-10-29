@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cache:
+  cache_manager:
     path: ../
 
 dev_dependencies:
