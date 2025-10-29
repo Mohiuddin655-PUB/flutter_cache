@@ -12,7 +12,7 @@ import 'package:flutter/foundation.dart';
 ///   () => UserModel(),
 /// );
 /// ```
-class CacheManager {
+class Cache {
   static final Map<String, Object> _cache = {};
 
   /// Retrieves an existing instance if available, or creates and stores
