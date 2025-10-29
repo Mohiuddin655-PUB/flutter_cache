@@ -8,8 +8,8 @@ import 'package:flutter/foundation.dart';
 /// Example:
 /// ```dart
 /// final item = Cache.put(
-///   key: 'user/42',
-///   create: () => UserModel(),
+///   'user/42',
+///   () => UserModel(),
 /// );
 /// ```
 class Cache {
@@ -48,7 +48,7 @@ class Cache {
 
   /// Attempts to gracefully dispose supported objects.
   /// Supports both `dispose()` and `close()` methods automatically.
-  static Future<void> _tryDispose(instance) async {
+  static Future<void> _tryDispose(Object? instance) async {
     if (instance == null) return;
     try {
       if (instance is ChangeNotifier) {

@@ -1,7 +1,6 @@
-name: cache
+name: example
 description: "A globally shared cache for storing and reusing logical data or objects by type and key."
 version: 1.0.0
-repository: https://github.com/Mohiuddin655-PUB/flutter_cache
 
 environment:
   sdk: ^3.0.0
@@ -10,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cache:
+    path: ../
 
 dev_dependencies:
   flutter_test:

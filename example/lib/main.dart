@@ -1,10 +1,3 @@
-## Cache
-
-A globally shared cache for storing and reusing logical data or objects by type and key.
-
-## Example
-
-```dart
 import 'package:cache/cache.dart';
 
 void main() {
@@ -13,4 +6,3 @@ void main() {
   });
   print(cache);
 }
-```
