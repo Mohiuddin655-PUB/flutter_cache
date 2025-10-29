@@ -1,4 +1,4 @@
-import 'package:cache_manager/cache.dart';
+import 'package:cache_manager/cache_manager.dart';
 
 void main() async {
   CacheManager.put("user", () {

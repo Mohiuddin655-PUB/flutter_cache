@@ -5,7 +5,7 @@ A globally shared cache for storing and reusing logical data or objects by type 
 ## Example
 
 ```dart
-import 'package:cache_manager/cache.dart';
+import 'package:cache_manager/cache_manager.dart';
 
 void main() async {
   CacheManager.put("user", () {
